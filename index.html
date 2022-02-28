@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f727fcd0b4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Body Mass Index</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container">
+        <img src="images/body-mass-index.jpg" />
+      </div>
+      <div class="title">Body Mass Index</div>
+
+      <div class="select-gender-container">
+        <div class="select-female">
+          <img src="images/woman.png" name="gender" value="Female" />
+          <input type="radio" id="female" name="gender" value="female" />
+        </div>
+        <div class="select-male">
+          <img src="images/man.png" name="gender" value="Female" />
+          <input type="radio" id="male" name="gender" value="male" />
+        </div>
+      </div>
+
+      <div class="body-info">
+        <div class="body-info-container">
+          <div class="height-info">
+            <label for="height">Height(cm) : </label>
+            <input type="text" id="height" name="height" />
+          </div>
+          <div class="weight-info">
+            <label for="weight">Weight(kg) : </label>
+            <input type="text" id="weight" name="weight" />
+          </div>
+        </div>
+
+        <div class="calculate-bmi">
+          <div class="calc-icon">
+            <i id="calc-icon" class="fas fa-calculator"></i>
+          </div>
+          <div class="calc-button">
+            <input
+              type="button"
+              id="calculate"
+              class="btn"
+              value="Calculate"
+              onclick="calc()"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="result-section" class="result">
+        <div class="result-container">
+          <div class="bmi result-item">
+            <div class="info-items">
+              <div>Body Mass Index(BMI)</div>
+              <div class="info-item">
+                <div id="bmi-result" data-info-label class="result-value"></div>
+                <div class="result-value">kg/m²</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ibw result-item">
+            <div class="info-items">
+              <div>Ideal Body Weight(IBW)</div>
+              <div class="info-item">
+                <div id="ibw-result" data-info-label class="result-value"></div>
+                <div class="result-value">kg</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bmi-result">
+            <div class="info-items">
+              <div id= "bmi-result-title" class="bmi-result-title"></div>
+              <div id="bmi-result-description" class="bmi-result-description">
+              </div>
+            </div>
+          </div>
+
+          <div class="bsa result-item">
+            <div class="info-items">
+              <div>Body Surface Area(BSA)</div>
+              <div class="info-item">
+                <div id="bsa-result" data-info-label class="result-value"></div>
+                <div class="result-value">m²</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lbw result-item">
+            <div class="info-items">
+              <div>Lean Body Weight(LBW)</div>
+              <div class="info-item">
+                <div id="lbw-result" data-info-label class="result-value"></div>
+                <div class="result-value">kg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
